@@ -1,0 +1,14 @@
+<?php
+    $dsn = 'mysql:host=localhost;port=3307;dbname=my_guitar_shop1';
+    $username = 'root';
+    $password = 'Kuyenda18.01.2004';
+
+
+    try {
+        $db = new PDO($dsn, $username, $password);
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        include('../errors/database_error.php');
+        exit();
+    }
+?>
